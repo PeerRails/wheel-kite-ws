@@ -5,9 +5,13 @@ class HomeController < ApplicationController
   end
 
   def search
-    res = HTTP.post("http://localhost:9000/search",
+    res = HTTP.post("#{mhost}/search",
           :json => { location: {long: location_params[:long], lat: location_params[:lat]} }).parse
     render json: res
+  end
+
+  def routing
+    render json: {error: "Not Found"}, status: 404
   end
 
   def location_params
