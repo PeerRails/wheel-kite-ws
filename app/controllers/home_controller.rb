@@ -10,10 +10,6 @@ class HomeController < ApplicationController
     render json: res
   end
 
-  def routing
-    render json: {error: "Not Found"}, status: 404
-  end
-
   def location_params
     params.require(:location).permit(:long, :lat)
   end
