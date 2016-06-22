@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.6'
 gem 'rails-api', '~> 0.4.0'
 gem 'puma', '~> 3.4'
-gem 'jbuilder', '~> 2.0'
+gem "http"
 # bundle exec rake doc:rails generates the API under doc/api.
 #gem 'sdoc', '~> 0.4.0', group: :doc
 
