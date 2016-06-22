@@ -1,0 +1,40 @@
+== WHEELKITE WebService
+Emin Agaev <homuthesun@gmail.com>
+
+Test task for backend developers
+
+= Install
+Wheel Kite WS is a webservice to call Wheel Kite microservice
+It is a test Rails project.
+
+== Requirements
+
+* Installed https://github.com/PeerRails/wheel-kite[Wheel Kite microservice]
+* Ruby 2.0+
+
+== Installation
+
+You need to clone the github project using the `git` command:
+
+ git clone https://github.com/PeerRails/wheel-kite-ws
+
+Then install required gems using the `bundle` command:
+
+ bundle install
+
+Want to test? Here it is:
+
+ rspec
+
+Setup WHEELKITE_HOST _(default: http://localhost:9000)_
+
+ export WHEELKITE_HOST=http://host:port
+
+Run service
+
+ puma
+
+Test connection
+
+ curl -H "Content-Type: application/json" http://localhost:3000/
+ curl -H "Content-Type: application/json" -X POST -d '{"location": {"long": 40.71330, "lat": -74}}' http://localhost:3000/search
